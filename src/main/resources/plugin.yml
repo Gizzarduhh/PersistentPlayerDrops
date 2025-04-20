@@ -1,0 +1,4 @@
+name: PersistentPlayerDrops
+version: '1.0'
+main: me.Gizzarduhh.persistentPlayerDrops.PersistentPlayerDrops
+api-version: '1.21'
