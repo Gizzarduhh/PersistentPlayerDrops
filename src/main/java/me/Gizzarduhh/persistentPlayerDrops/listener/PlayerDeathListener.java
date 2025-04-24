@@ -16,8 +16,6 @@ public class PlayerDeathListener implements Listener {
 
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent e) {
-        e.getDrops().forEach(itemStack -> itemStack.editPersistentDataContainer((pdc -> {
-            pdc.set(plugin.PERSISTENT_KEY, PersistentDataType.BOOLEAN, true);
-        })));
+        e.getDrops().forEach(itemStack -> itemStack.editPersistentDataContainer((pdc -> pdc.set(plugin.PERSISTENT_KEY, PersistentDataType.BOOLEAN, true))));
     }
 }

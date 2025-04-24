@@ -6,7 +6,6 @@ import me.Gizzarduhh.persistentPlayerDrops.listener.PlayerDeathListener;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -32,6 +31,6 @@ public final class PersistentPlayerDrops extends JavaPlugin {
     }
 
     public boolean isPersistent(ItemStack itemStack) {
-        return itemStack.getType() != Material.AIR && itemStack.getPersistentDataContainer().getOrDefault(PERSISTENT_KEY, PersistentDataType.BOOLEAN, false);
+        return itemStack.getType() != Material.AIR && itemStack.getPersistentDataContainer().has(PERSISTENT_KEY);
     }
 }
